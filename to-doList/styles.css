@@ -16,4 +16,8 @@ button{
 }
 li{
     cursor: pointer;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 38px;
+    
 }
