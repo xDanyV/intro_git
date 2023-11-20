@@ -48,10 +48,12 @@ function agregarFromStorage(tarea, completada) {
     btnDelete.classList.add("btn", "btn-danger");
     li.appendChild(btnDelete);
 
-    btnDelete.onclick = function(){
-        eliminarTarea(tarea);
-        li.remove();
-    }
+    btnDelete.onclick = function () {
+        if (confirm("¿Estás seguro de que deseas eliminar esta tarea?")) {
+            eliminarTarea(tarea);
+            li.remove();
+        }
+    };
 
     tablaTareas.appendChild(li);
     document.getElementById("txtTarea").value = "";
@@ -80,10 +82,12 @@ function agregarTarea() {
         btnDelete.classList.add("btn", "btn-danger");
         li.appendChild(btnDelete);
 
-        btnDelete.onclick = function(){
-            eliminarTarea(Tarea);
-            li.remove();
-        }
+        btnDelete.onclick = function () {
+            if (confirm("¿Estás seguro de que deseas eliminar esta tarea?")) {
+                eliminarTarea(Tarea);
+                li.remove();
+            }
+        };
 
         tablaTareas.appendChild(li);
         document.getElementById("txtTarea").value = "";
