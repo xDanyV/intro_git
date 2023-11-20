@@ -1,0 +1,16 @@
+h1,h3{
+    text-align: center;
+    margin: 20px;
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+}
+
+button{
+    margin: 20px;
+}
+.tachado{
+    text-decoration: line-through;
+}
