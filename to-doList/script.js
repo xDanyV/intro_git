@@ -17,6 +17,13 @@ btnAgregar.onclick = function () {
     agregarTarea();
 }
 
+const btnDeleteCache = document.getElementById("btnDeleteCache");
+
+btnDeleteCache.onclick = function(){
+    localStorage.removeItem("tareas");
+    location.reload(true);
+}
+
 function agregarFromStorage(tarea) {
     let li = document.createElement("li");
 
