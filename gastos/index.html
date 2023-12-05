@@ -10,23 +10,38 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-4">
         <h2>Gastos</h2>
         <form id="formGastos">
-            <input type="number" id="txtCantidad" placeholder="0.0" required>
-            <select class="form-select" id="selectCategoria">
-                <option >Comida</option>
-                <option >Transporte</option>
-                <option >Salud</option>
-                <option >Educacion</option>
-                <option >Entretanimiento</option>
-            </select>
-            <textarea id="txtDescripcion"></textarea>
-            <button class="btn btn-primary" type="submit">Guardar</button>
+            <div class="mb-3">
+                <input type="number" class="form-control" id="txtCantidad" placeholder="0.0" required>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" id="selectCategoria">
+                    <option>Comida</option>
+                    <option>Transporte</option>
+                    <option>Salud</option>
+                    <option>Educación</option>
+                    <option>Entretenimiento</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="txtDescripcion" placeholder="Descripción" required></textarea>
+            </div>
+            <button class="btn btn-primary m-3" type="submit">Guardar</button>
+            <button class="btn btn-danger" type="button" id="btnDelRegistros">Eliminar Todos los Registros</button>
         </form>
+        
     </div>
-    <ul id="listaGastos"></ul>
-    <h3 id="totalGastos"></h3>
+
+    <div class="container d-flex justify-content-center mt-4">
+        <div class="col-lg-6">
+            <ul id="listaGastos" class="list-group"></ul>
+            <h3 id="totalGastos" class="mt-3"></h3>
+        </div>
+    </div>
+
+
 
     <script src="script.js"></script>
 </body>
